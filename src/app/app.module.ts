@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ApiService } from './api.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ListcategoryComponent } from './listcategory/listcategory.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +20,11 @@ import { FooterComponent } from './footer/footer.component';
     AddCategoryComponent,
     SidebarComponent,
     TopbarComponent,
-    FooterComponent
+    FooterComponent,
+    ListcategoryComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [ApiService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
