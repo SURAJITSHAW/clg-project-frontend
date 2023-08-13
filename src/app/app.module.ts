@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { FormsModule } from '@angular/forms';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { TopbarComponent } from './topbar/topbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    SidebarComponent,
+    TopbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
