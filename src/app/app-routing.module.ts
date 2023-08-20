@@ -4,12 +4,14 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListcategoryComponent } from './listcategory/listcategory.component';
+import { ListproductsComponent } from './listproducts/listproducts.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'add-cat', component: AddCategoryComponent },
   { path: 'list-cat', component: ListcategoryComponent },
   { path: 'add-product', component: AddproductComponent },
+  { path: 'list-product', component: ListproductsComponent }
 ];
 
 @NgModule({

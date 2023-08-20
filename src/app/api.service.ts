@@ -23,5 +23,9 @@ export class ApiService {
     selcat(){
       return this.http.get('http://localhost:2000/cat/sel');
     }
+    
+    selpro(){
+      return this.http.get('http://localhost:2000/pro/sel');
+    }
 
 }

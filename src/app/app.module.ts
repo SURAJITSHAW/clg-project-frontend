@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListcategoryComponent } from './listcategory/listcategory.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { CKEditorModule } from 'ckeditor4-angular';
+import { ListproductsComponent } from './listproducts/listproducts.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CKEditorModule } from 'ckeditor4-angular';
     FooterComponent,
     ListcategoryComponent,
     AddproductComponent,
+    ListproductsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, CKEditorModule],
   providers: [ApiService],

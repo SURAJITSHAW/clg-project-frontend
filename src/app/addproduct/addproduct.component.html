@@ -47,7 +47,7 @@
                     <p>Category Name</p>
 
                     <p>
-                        <select name="category">
+                        <select name="category" [ngModel]>
                         <option value="">-Select Category-</option>
                         <option *ngFor="let c of allcat" value="{{c._id}}">
                             {{c.categoryname}}
