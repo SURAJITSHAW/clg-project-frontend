@@ -43,6 +43,7 @@
                         <thead>
                           <tr>
                             <th>Category Name</th>
+                            <th>Delete</th>
                             
                           </tr>
                         </thead>
@@ -51,6 +52,7 @@
                           
                           <tr *ngFor="let c of allcat">
                            <td>{{c.categoryname}}</td>
+                           <!-- In DB we had by default primary key named as "_id" -->
                            <td><button class="btn btn-danger" (click)="del(c._id)">Delete</button></td>
                           </tr>
                         </tbody>

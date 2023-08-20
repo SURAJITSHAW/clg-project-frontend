@@ -22,7 +22,7 @@ export class ListcategoryComponent {
     this.getdata();
   }
 
-  del(did: any) {
+  del(did: any) { // did -> is the primary key of that particular item
 
     if(window.confirm("Are you sure you want to delete?")) {
       var fd = new FormData();

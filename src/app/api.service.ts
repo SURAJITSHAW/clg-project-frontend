@@ -10,6 +10,10 @@ export class ApiService {
 
     inscat(fd: any){
       return this.http.post("http://localhost:2000/cat/add", fd);
+    
+    }
+    inspro(fd: any){
+      return this.http.post("http://localhost:2000/pro/add", fd);
     }
     
     delcat(fd: any){
