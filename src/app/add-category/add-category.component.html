@@ -42,10 +42,8 @@
                 </div>
                 <!-- /.container-fluid -->
 
-                <h2>{{cat}}</h2>
-
                 <form #frm="ngForm" method="post" (ngSubmit)="addCat(frm.value)">
-                    <label>Name: </label>
+                    <p><label>Enter category name: </label></p>
                     <input type="text" name="name" [ngModel]>
                     <input type="submit" name="save">                    
                 </form>

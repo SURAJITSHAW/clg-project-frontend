@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-category',
@@ -8,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class AddCategoryComponent {
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, private router : Router) {}
 
   cat:any = "My Category";
 
@@ -20,7 +21,7 @@ export class AddCategoryComponent {
     fd.append('cname', val.name);
 
     this.api.inscat(fd).subscribe((data: any) => {
-      console.log(data);
+      this.router.navigate(['/list-cat']);
     });
     
   }
