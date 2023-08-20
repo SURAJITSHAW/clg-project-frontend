@@ -51,6 +51,7 @@
                           
                           <tr *ngFor="let c of allcat">
                            <td>{{c.categoryname}}</td>
+                           <td><button class="btn btn-danger" (click)="del(c._id)">Delete</button></td>
                           </tr>
                         </tbody>
                       </table>

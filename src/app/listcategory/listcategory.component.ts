@@ -12,10 +12,27 @@ export class ListcategoryComponent {
 
   constructor(private api: ApiService) {}
 
-  ngOnInit() {
+  getdata(){
     this.api.selcat().subscribe((data: any) => {
       this.allcat = data;
     });
+  }
+
+  ngOnInit() {
+    this.getdata();
+  }
+
+  del(did: any) {
+
+    if(window.confirm("Are you sure you want to delete?")) {
+      var fd = new FormData();
+      fd.append('id', did);
+
+      this.api.delcat(fd).subscribe((data: any) => {
+        console.log(data);
+        this.getdata();
+      });
+    }
   }
 
 }

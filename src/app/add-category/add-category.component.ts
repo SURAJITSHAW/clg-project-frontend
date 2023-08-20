@@ -13,6 +13,9 @@ export class AddCategoryComponent {
   cat:any = "My Category";
 
   addCat(val: any) {
+
+    this.cat = val.name;
+
     var fd = new FormData();
     fd.append('cname', val.name);
 

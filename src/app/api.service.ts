@@ -11,6 +11,10 @@ export class ApiService {
     inscat(fd: any){
       return this.http.post("http://localhost:2000/cat/add", fd);
     }
+    
+    delcat(fd: any){
+      return this.http.post("http://localhost:2000/cat/del", fd);
+    }
 
     selcat(){
       return this.http.get('http://localhost:2000/cat/sel');
