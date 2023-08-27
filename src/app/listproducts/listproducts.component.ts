@@ -20,4 +20,15 @@ export class ListproductsComponent {
   ngOnInit() {
     this.getdata();
   }
+
+  delp(id: any) {
+    if (window.confirm('Are you sure you want to delete?')) {
+      var fd = new FormData();
+      fd.append('id', id);
+
+      this.api.delpro(fd).subscribe((data: any) => {
+        this.getdata();
+      });
+    }
+  }
 }

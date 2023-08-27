@@ -47,6 +47,7 @@
                             <th>Product Price</th>
                             <th>Product Details</th>
                             <th>Product Image</th>
+                            <th>Delete</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -57,6 +58,7 @@
                            <td>{{c.pprice}}</td>
                            <td>{{c.pd}}</td>
                            <td><img style="width: 200px;" [src]="'http://localhost:2000/product_img/'+c.pimg" /></td>
+                           <td><button (click)="delp(c._id)" class="btn btn-danger">Delete</button></td>
                           </tr>
                         </tbody>
                       </table>

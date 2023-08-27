@@ -19,6 +19,9 @@ export class ApiService {
     delcat(fd: any){
       return this.http.post("http://localhost:2000/cat/del", fd);
     }
+    delpro(fd: any){
+      return this.http.post("http://localhost:2000/pro/del", fd);
+    }
 
     selcat(){
       return this.http.get('http://localhost:2000/cat/sel');
