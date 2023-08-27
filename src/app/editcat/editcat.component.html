@@ -11,7 +11,7 @@
 
     <title>SB Admin 2 - Blank</title>
 
-  
+    
 </head>
 
 <body id="page-top">
@@ -30,44 +30,29 @@
             <div id="content">
 
                 <!-- Topbar -->
-               <app-topbar></app-topbar> 
+                <app-topbar></app-topbar>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">List Category</h1>
-
-                    <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th>Category Name</th>
-                            <th>Delete</th>
-                            <th>Edit</th>
-                            
-                          </tr>
-                        </thead>
-                        <tbody>
-
-                          
-                          <tr *ngFor="let c of allcat">
-                           <td>{{c.categoryname}}</td>
-                           <!-- In DB we had by default primary key named as "_id" -->
-                           <td><button class="btn btn-danger" (click)="del(c._id)">Delete</button></td>
-                           <td><a [routerLink]="'/edit-cat/'+c._id" class="btn btn-success">Edit</a></td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <h1 class="h3 mb-4 text-gray-800">Edit Category</h1>
 
                 </div>
                 <!-- /.container-fluid -->
+
+                <form #frm="ngForm" method="post" (ngSubmit)="editcatdata(frm.value)">
+                    <p><label>Enter category name: </label></p>
+                    <input type="text" name="name" [(ngModel)]="cats.categoryname">
+                    <input type="submit" name="save">                    
+                </form>
 
             </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
-         <app-footer></app-footer>
+            <app-footer></app-footer>
             <!-- End of Footer -->
 
         </div>
@@ -77,14 +62,11 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" routerLink="/">
+    <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
     
-
- 
 
 </body>
 

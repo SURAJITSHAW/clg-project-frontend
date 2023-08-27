@@ -11,7 +11,7 @@ export class AddCategoryComponent {
 
   constructor(private api: ApiService, private router : Router) {}
 
-  cat:any = "My Category";
+  cat:any = "";
 
   addCat(val: any) {
 

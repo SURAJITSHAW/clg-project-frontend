@@ -15,6 +15,7 @@ import { ListcategoryComponent } from './listcategory/listcategory.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { ListproductsComponent } from './listproducts/listproducts.component';
+import { EditcatComponent } from './editcat/editcat.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ListproductsComponent } from './listproducts/listproducts.component';
     ListcategoryComponent,
     AddproductComponent,
     ListproductsComponent,
+    EditcatComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, CKEditorModule],
   providers: [ApiService],
