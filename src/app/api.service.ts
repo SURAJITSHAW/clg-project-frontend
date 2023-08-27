@@ -36,4 +36,7 @@ export class ApiService {
   updatecat(fd: any) {
     return this.http.post('http://localhost:2000/cat/upd', fd);
   }
+  login(fd: any) {
+    return this.http.post('http://localhost:2000/auth/login', fd);
+  }
 }

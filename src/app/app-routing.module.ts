@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditcatComponent } from './editcat/editcat.component';
 import { ListcategoryComponent } from './listcategory/listcategory.component';
 import { ListproductsComponent } from './listproducts/listproducts.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'edit-cat/:id', component: EditcatComponent },
   { path: 'add-product', component: AddproductComponent },
   { path: 'list-product', component: ListproductsComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
